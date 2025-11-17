@@ -1,5 +1,6 @@
-//Problem-01
+// Problem-01
 
+/*
 
 function formatValue(input:string | number | boolean){
     if(typeof input === 'string'){
@@ -16,35 +17,31 @@ function formatValue(input:string | number | boolean){
     };
 };
 
-const finalResult=formatValue('shanta');
-const finalResult1=formatValue(20);
-const finalResult2=formatValue(true);
-
-console.log(finalResult,finalResult1, finalResult2);
-
+console.log(formatValue('hello'));
+console.log(formatValue(5));
+console.log(formatValue(true));
+*/
 
 
 
-//problem-01
+//problem-2
 
-/*
-function formatValue<T>(input:T){
-    if(typeof input === 'string'){
-        const result=input.toUpperCase();
-        return result;
-    }
-    else if(typeof input === 'number'){
-        const result =input * 10;
-        return result;
-    }
-    else if(typeof input ==='boolean'){
-        const result=!input;
-        return result;
-    };
+
+function getLength(input:string | number[]):number{
+   if(typeof input === 'string'){
+    return input.length;
+   }
+   else if(Array.isArray(input)){
+       return input.length;
+   }
+   
 };
 
-const finalResult=formatValue<string>('shanta');
-const finalResult1=formatValue<number>(100);
-const finalResult2=formatValue<boolean>(true);
-console.log(finalResult, finalResult1, finalResult2);
-*/
+console.log(getLength('typescript'));
+console.log(getLength([10, 20, 30, 40]));
+
+
+
+
+
+
