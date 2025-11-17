@@ -94,7 +94,8 @@ console.log(filterByRating(books));
 
 //problem-5
 
-type User={
+/*
+interface User{
     id:number;
     name:string;
     email:string;
@@ -113,4 +114,29 @@ const users = [
 ];
 
 console.log(filterActiveUsers(users));
+*/
 
+//problem-06
+
+/*
+interface Book{
+    title: string;
+    author:string;
+    publishedYear:number;
+    isAvailable:boolean;
+};
+
+function printBookDetails(book:Book){
+    console.log(`Title: ${book.title}, Author: ${book.author},Published: ${book.publishedYear}, Available: ${book.isAvailable ? "Yes" : "No"}`)
+};
+
+const myBook: Book = {
+    title: 'The Great Gatsby',
+    author: 'F. Scott Fitzgerald',
+    publishedYear: 1925,
+    isAvailable: true,
+};
+
+
+printBookDetails(myBook);
+*/
