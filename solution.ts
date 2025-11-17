@@ -31,16 +31,16 @@ function getLength(input:string | number[]):number{
    if(typeof input === 'string'){
     return input.length;
    }
-   else if(Array.isArray(input)){
-       return input.length;
-   }
-   
+    else {
+    return input.length;
+   }  
 };
 
 console.log(getLength('typescript'));
 console.log(getLength([10, 20, 30, 40]));
 
 */
+
 
 
 //problem-3
@@ -62,14 +62,15 @@ class Person{
 
 
 const person1 = new Person('John Doe', 30);
-console.log(person1.getDetails());
+person1.getDetails();
 
 const person2 = new Person('Alice', 25);
-console.log(person2.getDetails());
+person2.getDetails();
 */
 
 //problem-4
 
+/*
 type Item={
     title:string;
     rating:number;
@@ -86,7 +87,30 @@ const books:Item[] = [
   { title: 'Book C', rating: 5.0 },
 ];
 
-
-
 console.log(filterByRating(books));
+
+*/
+
+
+//problem-5
+
+type User={
+    id:number;
+    name:string;
+    email:string;
+    isActive:boolean;
+};
+
+
+const filterActiveUsers=(users:User[])=>{
+    const activeUsers:User[]=users.filter((user: { isActive: boolean }) => user.isActive === true);
+    return activeUsers;
+};
+const users = [
+  { id: 1, name: 'Rakib', email: 'rakib@example.com', isActive: true },
+  { id: 2, name: 'Asha', email: 'asha@example.com', isActive: false },
+  { id: 3, name: 'Rumi', email: 'rumi@example.com', isActive: true },
+];
+
+console.log(filterActiveUsers(users));
 
