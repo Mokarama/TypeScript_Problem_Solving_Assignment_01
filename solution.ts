@@ -1,7 +1,5 @@
-// Problem-01
 
-
-function formatValue(input:string | number | boolean){
+function formatValue(input:string | number | boolean): string | number | boolean{
     if(typeof input === 'string'){
         const result=input.toUpperCase();
         return result;
@@ -10,42 +8,36 @@ function formatValue(input:string | number | boolean){
         const result=input * 10;
         return result;
     }
-    else if(typeof input === 'boolean'){
+    else{
         const result= !input;
         return result;
     };
 };
 
-console.log(formatValue('hello'));
-console.log(formatValue(5));
-console.log(formatValue(true));
 
 
 
 
-//problem-2
 
-/*
 function getLength(input:string | number[]):number{
    if(typeof input === 'string'){
     return input.length;
    }
-    else {
-    return input.length;
+   else if (Array.isArray(input)) {
+        return input.length;
+    }
+    else{
+    return 0;
    }  
 };
 
-console.log(getLength('typescript'));
-console.log(getLength([10, 20, 30, 40]));
-
-*/
 
 
 
-//problem-3
 
 
-/*
+
+
 class Person{
         name:string;
         age:number;
@@ -53,23 +45,19 @@ class Person{
     constructor(name:string, age:number){
             this.name=name;
             this.age=age;
-    }
+    };
     getDetails(){
-        console.log(`'Name:${this.name}, Age: ${this.age}'`);
-    }
-}
+       return `'Name:${this.name}, Age: ${this.age}'`;
+    };
+};
 
 
 const person1 = new Person('John Doe', 30);
-person1.getDetails();
-
 const person2 = new Person('Alice', 25);
-person2.getDetails();
-*/
 
-//problem-4
 
-/*
+
+
 type Item={
     title:string;
     rating:number;
@@ -86,14 +74,12 @@ const books:Item[] = [
   { title: 'Book C', rating: 5.0 },
 ];
 
-console.log(filterByRating(books));
-
-*/
 
 
-//problem-5
 
-/*
+
+
+
 interface User{
     id:number;
     name:string;
@@ -102,9 +88,8 @@ interface User{
 };
 
 
-const filterActiveUsers=(users:User[])=>{
-    const activeUsers:User[]=users.filter((user: { isActive: boolean }) => user.isActive === true);
-    return activeUsers;
+const filterActiveUsers=(users:User[]):User[]=>{
+    return users.filter(user => user.isActive);
 };
 const users = [
   { id: 1, name: 'Rakib', email: 'rakib@example.com', isActive: true },
@@ -112,12 +97,8 @@ const users = [
   { id: 3, name: 'Rumi', email: 'rumi@example.com', isActive: true },
 ];
 
-console.log(filterActiveUsers(users));
-*/
 
-//problem-06
 
-/*
 interface Book{
     title: string;
     author:string;
@@ -126,7 +107,7 @@ interface Book{
 };
 
 function printBookDetails(book:Book){
-    console.log(`Title: ${book.title}, Author: ${book.author},Published: ${book.publishedYear}, Available: ${book.isAvailable ? "Yes" : "No"}`)
+    console.log(`Title: ${book.title}, Author: ${book.author},Published: ${book.publishedYear}, Available: ${book.isAvailable ? "Yes" : "No"}`);
 };
 
 const myBook: Book = {
@@ -138,13 +119,11 @@ const myBook: Book = {
 
 
 printBookDetails(myBook);
-*/
 
 
 
 
 
-//problem -7
 
 
 function getUniqueValues(
@@ -177,13 +156,16 @@ function getUniqueValues(
 };
 const array1 = [1, 2, 3, 4, 5];
 const array2 = [3, 4, 5, 6, 7];
-console.log(getUniqueValues(array1, array2));
 
 
 
-//problem-8
 
-/*
+
+
+
+
+
+
 interface Product{
     name:string;
     price: number;
@@ -214,8 +196,7 @@ const products = [
   { name: 'Bag', price: 50, quantity: 1, discount: 20 },
 ];
 
-console.log(calculateTotalPrice(products));
 
-*/
 
-//
+
+
