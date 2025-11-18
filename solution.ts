@@ -140,3 +140,39 @@ const myBook: Book = {
 
 printBookDetails(myBook);
 */
+
+
+//problem-8
+interface Product{
+    name:string;
+    price: number;
+    quantity: number;
+    discount?: number;
+}
+
+function calculateTotalPrice(products: Product[]): number {
+  if (products.length === 0) return 0;
+
+  return products
+    .map(product => {
+      const total = product.price * product.quantity;
+
+      if (product.discount !== undefined) {
+        const discountAmount = total * (product.discount / 100);
+        return total - discountAmount;
+      }
+
+      return total;
+    })
+    .reduce((acc, curr) => acc + curr, 0);
+}
+
+const products = [
+  { name: 'Pen', price: 10, quantity: 2 },
+  { name: 'Notebook', price: 25, quantity: 3, discount: 10 },
+  { name: 'Bag', price: 50, quantity: 1, discount: 20 },
+];
+
+console.log(calculateTotalPrice(products));
+
+
