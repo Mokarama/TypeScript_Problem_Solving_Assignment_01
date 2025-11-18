@@ -1,7 +1,6 @@
 // Problem-01
 
 
-/*
 function formatValue(input:string | number | boolean){
     if(typeof input === 'string'){
         const result=input.toUpperCase();
@@ -20,7 +19,7 @@ function formatValue(input:string | number | boolean){
 console.log(formatValue('hello'));
 console.log(formatValue(5));
 console.log(formatValue(true));
-*/
+
 
 
 
@@ -142,7 +141,49 @@ printBookDetails(myBook);
 */
 
 
+
+
+
+//problem -7
+
+
+function getUniqueValues(
+  first: (number | string)[],
+  second: (number | string)[]
+): (number | string)[] {
+
+    const taken: { [key: string]: boolean } = {};
+    const output: (number | string)[] = [];
+
+    const add = (arr: (number | string)[]) => {
+        for (let i = 0; i < arr.length; i++) {
+
+            const item = arr[i];
+            if (item === undefined) continue;
+
+            const k = String(item);
+
+            if (!taken[k]) {
+                taken[k] = true;
+                output[output.length] = item;
+            }
+        }
+    };
+
+    add(first);
+    add(second);
+
+    return output;
+};
+const array1 = [1, 2, 3, 4, 5];
+const array2 = [3, 4, 5, 6, 7];
+console.log(getUniqueValues(array1, array2));
+
+
+
 //problem-8
+
+/*
 interface Product{
     name:string;
     price: number;
@@ -175,4 +216,6 @@ const products = [
 
 console.log(calculateTotalPrice(products));
 
+*/
 
+//
