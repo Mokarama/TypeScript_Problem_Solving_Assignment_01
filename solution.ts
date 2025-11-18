@@ -18,7 +18,6 @@ function formatValue(input:string | number | boolean): string | number | boolean
 
 
 
-
 function getLength(input:string | number[]):number{
    if(typeof input === 'string'){
     return input.length;
