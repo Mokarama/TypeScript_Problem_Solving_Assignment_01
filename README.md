@@ -61,14 +61,18 @@ TypeScript কিছু বিশেষ টাইপ দেয় যা কো�
  কোথায় কোড execution থেমে যাবে, বুঝতে সাহায্য করে।
 
 ---
-// any
-let data: any = "hello";
-data = 100;
+## Example
 
-// unknown
+```ts
+// any — flexible but unsafe
+let data: any = "hello";
+data = 100; // Allowed — no type checking
+
+// unknown 
 let input: unknown = "test";
-if (typeof input === "string") 
-console.log(input.toUpperCase());
+if (typeof input === "string") {
+  console.log(input.toUpperCase());
+}
 
 // never
 function fail(): never {
