@@ -61,5 +61,18 @@ TypeScript কিছু বিশেষ টাইপ দেয় যা কো�
  কোথায় কোড execution থেমে যাবে, বুঝতে সাহায্য করে।
 
 ---
+// any
+let data: any = "hello";
+data = 100;
+
+// unknown
+let input: unknown = "test";
+if (typeof input === "string") 
+console.log(input.toUpperCase());
+
+// never
+function fail(): never {
+  throw new Error("Oops!");
+}
 
 
