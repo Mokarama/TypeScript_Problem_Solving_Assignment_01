@@ -66,7 +66,8 @@ TypeScript কিছু বিশেষ টাইপ দেয় যা কো�
 ```ts
 // any — flexible but unsafe
 let data: any = "hello";
-data = 100; // Allowed — no type checking
+data = 100;
+
 
 // unknown 
 let input: unknown = "test";
