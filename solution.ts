@@ -19,8 +19,6 @@ function formatValue(input:string | number | boolean): string | number | boolean
 
 
 
-
-
 function getLength(input:string | number[]):number{
    if(typeof input === 'string'){
     return input.length;
@@ -40,7 +38,6 @@ function getLength(input:string | number[]):number{
 
 
 
-
 class Person{
         name:string;
         age:number;
@@ -50,11 +47,9 @@ class Person{
             this.age=age;
     };
     getDetails(){
-       return `'Name:${this.name}, Age: ${this.age}'`;
+       return `'Name: ${this.name}, Age: ${this.age}'`;
     };
 };
-
-
 
 
 
@@ -72,9 +67,6 @@ function filterByRating(items: Item[]):Item[]{
     const rating= items.filter(item => item.rating >=4);
     return rating;
 }
-
-
-
 
 
 
@@ -106,8 +98,6 @@ const filterActiveUsers=(users:User[]):User[]=>{
 
 
 
-
-
 interface Book{
     title: string;
     author:string;
@@ -116,19 +106,8 @@ interface Book{
 };
 
 function printBookDetails(book:Book){
-    console.log(`Title: ${book.title}, Author: ${book.author},Published: ${book.publishedYear}, Available: ${book.isAvailable ? "Yes" : "No"}`);
+    console.log(`Title: ${book.title}, Author: ${book.author}, Published: ${book.publishedYear}, Available: ${book.isAvailable ? "Yes" : "No"}`);
 };
-
-const myBook: Book = {
-    title: 'The Great Gatsby',
-    author: 'F. Scott Fitzgerald',
-    publishedYear: 1925,
-    isAvailable: true,
-};
-
-
-printBookDetails(myBook);
-
 
 
 
@@ -177,7 +156,6 @@ function getUniqueValues(
 
 
 
-
 interface Product{
     name:string;
     price: number;
@@ -205,5 +183,12 @@ function calculateTotalPrice(products: Product[]): number {
 
 
 
+const products = [
+  { name: 'Pen', price: 10, quantity: 2 },
+  { name: 'Notebook', price: 25, quantity: 3, discount: 10 },
+  { name: 'Bag', price: 50, quantity: 1, discount: 20 },
+];
+
+console.log(calculateTotalPrice(products));
 
 
