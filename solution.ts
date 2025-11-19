@@ -18,6 +18,9 @@ function formatValue(input:string | number | boolean): string | number | boolean
 
 
 
+
+
+
 function getLength(input:string | number[]):number{
    if(typeof input === 'string'){
     return input.length;
@@ -29,6 +32,7 @@ function getLength(input:string | number[]):number{
     return 0;
    }  
 };
+
 
 
 
@@ -51,8 +55,10 @@ class Person{
 };
 
 
-const person1 = new Person('John Doe', 30);
-const person2 = new Person('Alice', 25);
+
+
+
+
 
 
 
@@ -67,11 +73,10 @@ function filterByRating(items: Item[]):Item[]{
     return rating;
 }
 
-const books:Item[] = [
-  { title: 'Book A', rating: 4.5 },
-  { title: 'Book B', rating: 3.2 },
-  { title: 'Book C', rating: 5.0 },
-];
+
+
+
+
 
 
 
@@ -90,11 +95,16 @@ interface User{
 const filterActiveUsers=(users:User[]):User[]=>{
     return users.filter(user => user.isActive);
 };
-const users = [
-  { id: 1, name: 'Rakib', email: 'rakib@example.com', isActive: true },
-  { id: 2, name: 'Asha', email: 'asha@example.com', isActive: false },
-  { id: 3, name: 'Rumi', email: 'rumi@example.com', isActive: true },
-];
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -118,6 +128,9 @@ const myBook: Book = {
 
 
 printBookDetails(myBook);
+
+
+
 
 
 
@@ -153,8 +166,8 @@ function getUniqueValues(
 
     return output;
 };
-const array1 = [1, 2, 3, 4, 5];
-const array2 = [3, 4, 5, 6, 7];
+
+
 
 
 
@@ -189,11 +202,6 @@ function calculateTotalPrice(products: Product[]): number {
     .reduce((acc, curr) => acc + curr, 0);
 }
 
-const products = [
-  { name: 'Pen', price: 10, quantity: 2 },
-  { name: 'Notebook', price: 25, quantity: 3, discount: 10 },
-  { name: 'Bag', price: 50, quantity: 1, discount: 20 },
-];
 
 
 
